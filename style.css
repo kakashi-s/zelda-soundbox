@@ -10,12 +10,26 @@ html {
     font-family: sans-serif;
   }
 
-  h1 {
-      font-size: 30px;
-      color: white;
-      text-align: center;
-      padding-top: 20px;
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 20px;
   }
+
+  .container > div {
+      font-size: 40px;
+      color: white;
+      display: inline-block;
+      align-items: center;
+      border: .4rem solid rgb(100, 0, 0);
+      border-radius: .5rem;
+      padding: 4px;
+      text-align: center;
+      margin: auto;
+      opacity: 100%;
+      width: 330px;
+  }
+
   
   .keys {
     display: flex;
