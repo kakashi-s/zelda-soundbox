@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Legend of Zelda Soundbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Zelda Soundbox</h1>
+
+    <div class="keys">
+
+        <div data-key="65" class="key">
+
+          <kbd>A</kbd> 
+          <!--keyboard input "A"-->
+
+          <span class="sound">Navi!</span>
+          <!--span element container for class "sound" and name of sound "clap"-->
+
+        </div>
+
+        <div data-key="83" class="key">
+          <kbd>S</kbd>
+          <span class="sound">Solved!</span>
+        </div>
+
+        <div data-key="68" class="key">
+          <kbd>D</kbd>
+          <span class="sound">Item!</span>
+        </div>
+
+        <div data-key="70" class="key">
+          <kbd>F</kbd>
+          <span class="sound">Rupees!</span>
+        </div>
+
+        <div data-key="71" class="key">
+          <kbd>G</kbd>
+          <span class="sound">Heart!</span>
+        </div>
+
+        <div data-key="72" class="key">
+          <kbd>H</kbd>
+          <span class="sound">Boss!</span>
+        </div>
+
+        <div data-key="74" class="key">
+          <kbd>J</kbd>
+          <span class="sound">MstrSwrd!</span>
+        </div>
+
+        <div data-key="75" class="key">
+          <kbd>K</kbd>
+          <span class="sound">Lullaby!</span>
+        </div>
+
+        <div data-key="76" class="key">
+          <kbd>L</kbd>
+          <span class="sound">GG!</span>
+        </div>
+
+      </div>
+      <!-- links data-key to audio file-->
+      <audio data-key="65" src="sounds/navi.mp3"></audio>
+      <audio data-key="83" src="sounds/solved.mp3"></audio>
+      <audio data-key="68" src="sounds/item.mp3"></audio>
+      <audio data-key="70" src="sounds/rupee.mp3"></audio>
+      <audio data-key="71" src="sounds/heart.mp3"></audio>
+      <audio data-key="72" src="sounds/boss.mp3"></audio>
+      <audio data-key="74" src="sounds/master.mp3"></audio>
+      <audio data-key="75" src="sounds/lullaby.mp3"></audio>
+      <audio data-key="76" src="sounds/gg.mp3"></audio>
+    
+    <script>
+
+    function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        //backticks are used in querySelector to allow for evaluation 
+        //of the variable ${e.keyCode} inside of the string
+
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        
+        if(!audio) return; 
+        //stops the function from running if data-key has no audio
+        
+        audio.currentTime = 0;
+        //allows you to hammer the buttons instead of waiting for audio to finish
+
+        audio.play();
+        //plays the audio element we have from the querySelector
+
+        key.classList.add('playing');
+        /*CSS   .key {
+                border: .4rem solid black;
+                border-radius: .5rem;
+                margin: 1rem;
+                font-size: 1.5rem;
+                padding: 1rem .5rem;
+
+                transition: all .07s ease; 
+
+                width: 10rem;
+                text-align: center;
+                color: white;
+                background: rgba(0,0,0,0.4);
+                text-shadow: 0 0 .5rem black; 
+                }
+
+            .playing {
+
+                transform: scale(1.1);
+
+                border-color: #ffc600;
+                box-shadow: 0 0 1rem #ffc600;
+                */
+    }
+
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+    function removeTransition(e) {
+        if(e.propertyName !== 'transform') return;
+        this.classList.remove('playing');
+    }
+
+    window.addEventListener('keydown', playSound);
+
+    </script> 
+
+    
+
+</body>
+</html>
