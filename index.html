@@ -2,77 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Legend of Zelda Soundbox</title>
+  <title>Zelda Keyboard Soundbox</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container">
-      <div1></div1>
-      <div>Zelda Soundbox</div>
-      <div3></div3>
+      <div>Zelda Keyboard Soundbox</div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
 
-    <div class="instructions">Press on keys to hear sound!</div>
-
-    <div class="keys-1">
+    <br>
+    <br>
+    <br>
+    
+    <div class="keys flex-container1">
 
         <div data-key="65" class="key">
-
           <kbd>A</kbd> 
           <!--keyboard input "A"-->
-
-          <span class="sound">Navi!</span>
+          <span class="sound">Navi</span>
           <!--span element container for class "sound" and name of sound "clap"-->
-
         </div>
 
         <div data-key="83" class="key">
           <kbd>S</kbd>
-          <span class="sound">Treasure!</span>
+          <span class="sound">Chest</span>
         </div>
 
         <div data-key="68" class="key">
           <kbd>D</kbd>
-          <span class="sound">Item!</span>
+          <span class="sound">Item</span>
         </div>
+      </div>
 
+    <div class="keys flex-container2">
         <div data-key="70" class="key">
           <kbd>F</kbd>
-          <span class="sound">Rupees!</span>
+          <span class="sound">Rupees</span>
         </div>
-    </div>
-    <div class="keys-2">
+    
         <div data-key="71" class="key">
           <kbd>G</kbd>
-          <span class="sound">Heart!</span>
+          <span class="sound">Heart</span>
         </div>
 
         <div data-key="72" class="key">
           <kbd>H</kbd>
-          <span class="sound">Boss!</span>
+          <span class="sound">Ganon</span>
         </div>
-
+      </div>
+    <div class="keys flex-container3">
         <div data-key="74" class="key">
           <kbd>J</kbd>
-          <span class="sound">MstrSwrd!</span>
+          <span class="sound">Master</span>
         </div>
 
         <div data-key="75" class="key">
           <kbd>K</kbd>
-          <span class="sound">Lullaby!</span>
+          <span class="sound">Zelda</span>
         </div>
 
         <div data-key="76" class="key">
           <kbd>L</kbd>
-          <span class="sound">GG!</span>
+          <span class="sound">GG</span>
         </div>
     </div>
+  </div>
 
       <!-- links data-key to audio file-->
       <audio data-key="65" src="sounds/navi.mp3"></audio>
@@ -100,33 +96,13 @@
         audio.currentTime = 0;
         //allows you to hammer the buttons instead of waiting for audio to finish
 
+        audio.volume = 0.25;
+        //lower audio volume
+
         audio.play();
         //plays the audio element we have from the querySelector
 
         key.classList.add('playing');
-        /*CSS   .key {
-                border: .4rem solid black;
-                border-radius: .5rem;
-                margin: 1rem;
-                font-size: 1.5rem;
-                padding: 1rem .5rem;
-
-                transition: all .07s ease; 
-
-                width: 10rem;
-                text-align: center;
-                color: white;
-                background: rgba(0,0,0,0.4);
-                text-shadow: 0 0 .5rem black; 
-                }
-
-            .playing {
-
-                transform: scale(1.1);
-
-                border-color: #ffc600;
-                box-shadow: 0 0 1rem #ffc600;
-                */
     }
 
     //remove classlist playing to remove pause time
@@ -140,11 +116,7 @@
 
     window.addEventListener('keydown', playSound);
 
-    //touch responsive
-    const touch = document.querySelectorAll('.key');
 
-    //event listener for touch
-    touch.forEach(key => key.addEventListener('touchstart', playSound));
 
     </script> 
 
