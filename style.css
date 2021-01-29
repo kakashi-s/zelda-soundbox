@@ -55,7 +55,7 @@ html {
   
   .flex-container1 {
     display: flex;
-    max-width: 99vh;
+    max-width: 88vh;
     align-items: center;
     justify-content: space-around;
     margin: auto;
@@ -65,7 +65,7 @@ html {
   .flex-container2 {
     display: flex;
     flex: 1;
-    max-width: 99vh;
+    max-width: 88vh;
     align-items: center;
     justify-content: space-around;
     margin: auto;
@@ -74,7 +74,7 @@ html {
 
   .flex-container3 {
     display: flex;
-    max-width: 99vh;
+    max-width: 88vh;
     align-items: center;
     justify-content: space-around;
     margin: auto;
@@ -84,16 +84,15 @@ html {
   .key {
     border: .4rem solid rgb(100, 0, 0);
     border-radius: .5rem;
-    margin: 3rem;
-    font-size: 4rem;
-    padding: 3rem 3rem;
+    margin: 15px;
+    padding: 5rem;
     transition: all .02s ease;
-    width: 7rem;
+    width: 14rem;
+    height: 11rem;
     text-align: center;
     color: white;
     background: rgba(0,0,0,0.6);
     text-shadow: 0 0 .5rem black;
-    flex-shrink: 3;
   }
   
   .playing {
@@ -104,11 +103,11 @@ html {
   
   kbd {
     display: block;
-    font-size: 4rem;
+    font-size: 5.6rem;
   }
   
   .sound {
-    font-size: 1.3rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: #ffc600;
