@@ -19,20 +19,10 @@ html {
     display: flex;
     flex-wrap: nowrap;
     padding-top: 20px;
+
   }
 
-  .instructions {
-    display: flex;
-    color: white;
-    font-size: 20px;
-    border: .4rem solid  rgb(100, 0, 0);
-    border-radius: .5rem;
-    width: 260px;
-    text-align: center;
-    padding: 4px;
-    margin: auto;
-    background-color: rgba(0,0,0,0.6);
-  }
+  
 
   .container > div {
     display: flex;
@@ -40,7 +30,6 @@ html {
     font-size: 40px;
     color: white;
     display: inline-block;
-    flex-direction: column;
     align-items: center;
     border: .4rem solid rgb(100, 0, 0);
     border-radius: .5rem;
@@ -49,13 +38,14 @@ html {
     margin: auto;
     opacity: 100%;
     max-width: 600px;
+    padding: 2rem;
 
   }
 
   
   .flex-container1 {
     display: flex;
-    max-width: 88vh;
+    max-width: 95%;
     align-items: center;
     justify-content: space-around;
     margin: auto;
@@ -65,7 +55,7 @@ html {
   .flex-container2 {
     display: flex;
     flex: 1;
-    max-width: 88vh;
+    max-width: 95%;
     align-items: center;
     justify-content: space-around;
     margin: auto;
@@ -74,7 +64,7 @@ html {
 
   .flex-container3 {
     display: flex;
-    max-width: 88vh;
+    max-width: 95%;
     align-items: center;
     justify-content: space-around;
     margin: auto;
@@ -87,7 +77,7 @@ html {
     margin: 15px;
     padding: 5rem;
     transition: all .02s ease;
-    width: 14rem;
+    width: 13rem;
     height: 11rem;
     text-align: center;
     color: white;
@@ -119,9 +109,15 @@ html {
   }
 
   #keyboard { 
-    width: 425px; 
-    height: 20px; 
-    border: 2px solid rgb(100, 0, 0); 
-    padding: 5px; 
-    font-size: 20px;
+    width: 85rem; 
+    height: 30rem; 
+    border: 1px solid rgb(100, 0, 0); 
+    padding: 12rem; 
+    font-size: 6rem;
+    color: white;
+    background-color: rgba(1, 192, 1, 0.226);
+  }
+
+  ::placeholder {
+    color: white;
   }
