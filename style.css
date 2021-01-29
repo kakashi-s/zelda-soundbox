@@ -113,3 +113,16 @@ html {
     letter-spacing: .1rem;
     color: #ffc600;
     }
+
+  .containerkb {
+    display: flex;
+    justify-content: center;
+  }
+
+  #keyboard { 
+    width: 425px; 
+    height: 20px; 
+    border: 2px solid rgb(100, 0, 0); 
+    padding: 5px; 
+    font-size: 20px;
+  }
