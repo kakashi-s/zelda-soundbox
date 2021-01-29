@@ -13,8 +13,14 @@
       <div>Zelda Soundbox</div>
       <div3></div3>
     </div>
-      
-    <div class="keys">
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="instructions">Press on keys to hear sound!</div>
+
+    <div class="keys-1">
 
         <div data-key="65" class="key">
 
@@ -40,7 +46,8 @@
           <kbd>F</kbd>
           <span class="sound">Rupees!</span>
         </div>
-
+    </div>
+    <div class="keys-2">
         <div data-key="71" class="key">
           <kbd>G</kbd>
           <span class="sound">Heart!</span>
@@ -65,8 +72,8 @@
           <kbd>L</kbd>
           <span class="sound">GG!</span>
         </div>
+    </div>
 
-      </div>
       <!-- links data-key to audio file-->
       <audio data-key="65" src="sounds/navi.mp3"></audio>
       <audio data-key="83" src="sounds/treasure.mp3"></audio>
@@ -122,7 +129,7 @@
                 */
     }
 
-
+    //remove classlist playing to remove pause time
     const keys = document.querySelectorAll('.key');
     keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
@@ -132,6 +139,12 @@
     }
 
     window.addEventListener('keydown', playSound);
+
+    //touch responsive
+    const touch = document.querySelectorAll('.key');
+
+    //event listener for touch
+    touch.forEach(key => key.addEventListener('touchstart', playSound));
 
     </script> 
 
